@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistols | Glock</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>/* styles.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        nav ul li {
+            margin: 0;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-bar input {
+            padding: 0.5rem;
+            margin-right: 0.5rem;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .search-bar button {
+            padding: 0.5rem 1rem;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .search-bar button:hover {
+            background-color: #777;
+        }
+        
+        .hero {
+            background: url('d.jpg') no-repeat center center/cover;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .pistols {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .pistol-card {
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+        }
+        
+        .pistol-card img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+        }
+        
+        .pistol-card .buttons {
+            margin-top: 1rem;
+        }
+        
+        .pistol-card button {
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .pistol-card .buy-now {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .pistol-card .add-to-cart {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .pistol-card button:hover {
+            opacity: 0.8;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Untitled.jpeg" alt="Glock Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Quality</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">Procurement</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for pistols...">
+            <button onclick="searchPistols()">Search</button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>PISTOLS</h1>
+            <p>Explore our extensive range of GSF pistols.</p>
+        </section>
+        
+        <section class="pistols" id="pistolsContainer">
+            <div class="pistol-card" data-name="Model 1">
+                <img src="roh.jpeg" alt="Pistol 1">
+                <h2>Model 1</h2>
+                <p>Description of Model 1.</p>
+                <div class="buttons">
+                    <a href="buy.html" class="buy-now">Buy Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pistol-card" data-name="Model 2">
+                <img src="roh.jpeg" alt="Pistol 2">
+                <h2>Model 2</h2>
+                <p>Description of Model 2.</p>
+                <div class="buttons">
+                    <a href="buy.html" class="buy-now">Buy Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pistol-card" data-name="Model 3">
+                <img src="roh.jpeg" alt="Pistol 3">
+                <h2>Model 2</h2>
+                <p>Description of Model 2.</p>
+                <div class="buttons">
+                    <a href="buy.html" class="buy-now">Buy Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pistol-card" data-name="Model 4">
+                <img src="roh.jpeg" alt="Pistol 4">
+                <h2>Model 2</h2>
+                <p>Description of Model 2.</p>
+                <div class="buttons">
+                    <a href="buy.html" class="buy-now">Buy Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="pistol-card" data-name="Model 5">
+                <img src="roh.jpeg" alt="Pistol 5">
+                <h2>Model 2</h2>
+                <p>Description of Model 2.</p>
+                <div class="buttons">
+                    <a href="buy.html" class="buy-now">Buy Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add more pistol cards as needed -->
+        </section>
+        <p id="noResults" style="display: none;">No results found.</p>
+    </main>
+    
+    <footer>
+        <p>&copy; All rights reserved Gun and Shell Factory - Cossipore, Kolkata </p>
+    </footer>
+
+    <script>// scripts.js
+
+        function searchPistols() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const pistols = document.querySelectorAll('.pistol-card');
+            let found = false;
+        
+            pistols.forEach(pistol => {
+                const name = pistol.getAttribute('data-name').toLowerCase();
+                if (name.includes(input)) {
+                    pistol.style.display = 'block';
+                    found = true;
+                } else {
+                    pistol.style.display = 'none';
+                }
+            });
+        
+            document.getElementById('noResults').style.display = found ? 'none' : 'block';
+        }
+        </script>
+</body>
+</html>

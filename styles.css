@@ -1,0 +1,584 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+   }
+   
+   .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+   }
+   
+   header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative; /* Ensure it's positioned correctly */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+   }
+   
+   .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+   
+   .logo {
+    width: 100px;
+   }
+   
+   nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+   }
+   
+   nav ul li {
+    margin-right: 20px;
+   }
+   
+   nav ul li a {
+    color: white;
+    text-decoration: none;
+   }
+   
+   nav ul li a:hover {
+    text-decoration: underline;
+   }
+   
+   /* Market page styles */
+   main.market {
+    padding: 40px 0;
+   }
+   
+   .product {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   }
+   
+   .product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+   }
+   
+   .product-info {
+    flex: 1;
+    width: 100%;
+   }
+   
+   .product-info h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+   }
+   
+   .product-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+   }
+   
+   .buttons {
+    margin-top: 10px;
+   }
+   
+   .buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   }
+   
+   .buttons button:hover {
+    background-color: #0056b3;
+   }
+   
+   /* Footer styles */
+   footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative; /* Ensure it's positioned correctly */
+    bottom: 0;
+   }
+   
+   /* Responsive adjustments */
+   @media (max-width: 1024px) {
+    .container {
+    width: 90%;
+    }
+   }
+   
+   @media (max-width: 768px) {
+    .header-content {
+    flex-direction: column;
+    }
+   
+    .product {
+    padding: 20px;
+    }
+   
+    nav ul {
+    flex-direction: column;
+    align-items: center;
+    }
+   
+    nav ul li {
+    margin: 10px 0;
+    }
+   }
+   
+   /* Login page styles */
+   body.login-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('job_web.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+   }
+   
+   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   }
+   
+   .login-box {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   }
+   
+   footer {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: relative; /* Ensure it's positioned correctly */
+    bottom: 0;
+   }
+   
+   /* Company page styles */
+   .body {
+    font-family: 'Arial', sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   .header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+   }
+   
+   .logo {
+    width: 100px;
+    margin-right: 20px;
+   }
+   
+   .company-info {
+    flex: 1;
+   }
+   
+   .company-info h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+   }
+   
+   .company-info p {
+    margin: 5px 0 0;
+    color: #666;
+   }
+   
+   .navbar {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    flex-wrap: wrap;
+   }
+   
+   .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+   }
+   
+   .navbar a:hover {
+    background: #444;
+    border-radius: 5px;
+   }
+   
+   .slider {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+   }
+   
+   .slider img {
+    max-width: 100%;
+    border-radius: 10px;
+   }
+   
+   /* Media query for screens less than or equal to 768px */
+   @media (max-width: 768px) {
+    .slider img {
+    max-width: 600px; /* Adjust as needed for smaller screens */
+    }
+   
+    .info-section {
+    flex-direction: column;
+    align-items: center;
+    }
+   
+    .info-box {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+   }
+   
+   .info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+   }
+   
+   .info-box {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   }
+   
+   .agreement {
+    text-align: center;
+    margin: 20px 0;
+   }
+   
+   .login-btn {
+    display: block;
+    width: 100px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+   }
+   
+   .login-btn:hover {
+    background: #218838;
+   }
+   
+   .container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+   }
+   
+   .login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   }
+   
+   .logo {
+    width: 100px;
+    margin-bottom: 20px;
+   }
+   
+   .login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+   }
+   
+   .textbox {
+    position: relative;
+    margin-bottom: 30px;
+   }
+   
+   .textbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+   }
+   
+   .textbox input:focus {
+    border-color: #66afe9;
+   }
+   
+   .btn {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+   }
+   
+   .btn:hover {
+    background: #218838;
+   }
+   
+   p {
+    margin-top: 20px;
+   }
+   
+   p a {
+    color: #007bff;
+    text-decoration: none;
+   }
+   
+   p a:hover {
+    text-decoration: underline;
+   }
+   
+   /* Media Queries for Responsive Design */
+   @media (max-width: 600px) {
+    .login-box {
+    padding: 20px;
+    }
+   
+    .textbox input {
+    padding: 8px;
+    }
+   
+    .btn {
+    padding: 8px;
+    font-size: 14px;
+    }
+   
+    .info-section {
+    flex-direction: column;
+    }
+   
+    .info-box {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+   }
+   
+   /* Additional Responsive Design */
+   
+   .buy-options {
+    text-align: center;
+    margin: 2rem;
+   }
+   
+   .buy-options .buttons {
+    margin-top: 1rem;
+   }
+   
+   .buy-options button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+   }
+   
+   .buy-options button:hover {
+    opacity: 0.8;
+   }
+   
+   .registration-form {
+    text-align: center;
+    margin: 2rem;
+   }
+   
+   .registration-form form {
+    display: inline-block;
+    text-align: left;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   }
+   
+   .registration-form form div {
+    margin-bottom: 1rem;
+   }
+   
+   .registration-form form label {
+    display: block;
+    margin-bottom: 0.5rem;
+   }
+   
+   .registration-form form input, .registration-form form select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+   }
+   
+   .terms {
+    text-align: center;
+    margin: 2rem;
+   }
+   
+   .terms-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    background-color: #fff;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+   
+   .accept-terms {
+    margin: 1rem 0;
+   }
+   
+   .accept-terms input {
+    margin-right: 0.5rem;
+   }
+   
+   #emailInput {
+    margin-top: 1rem;
+   }
+   
+   #emailInput label {
+    display: block;
+    margin-bottom: 0.5rem;
+   }
+   
+   #emailInput input {
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+   }
+   
+   .gif-container {
+    position: absolute;
+    top: 0;
+    right: 100;
+   }
+   
+   .gif {
+    height: 50px; /* Adjust as needed */
+    width: 50px; /* Adjust as needed */
+    object-fit: cover; /* Maintain aspect ratio */
+   }
+   /* Login box styles */
+   .login-box {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    display: none; /* Initially hidden */
+    background-color: #fff;
+    text-align: center;
+   }
+   
+   .login-box .logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+   }
+   
+   .login-box h2 {
+    margin-bottom: 20px;
+   }
+   
+   .login-box .textbox {
+    margin-bottom: 20px;
+   }
+   
+   .login-box .textbox input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   }
+   
+   .login-box .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+   }
+   
+   .login-box .btn:hover {
+    background-color: #218838;
+   }
+   
+   .login-box p {
+    margin-top: 10px;
+   }
+   
+   .login-box p a {
+    color: #007bff;
+    text-decoration: none;
+   }
+   
+   .login-box p a:hover {
+    text-decoration: underline;
+   }
+   

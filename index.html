@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Home - Your Company Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <style>
+        table {
+            border-collapse: collapse; /* Ensures borders don't overlap */
+            border: 1px solid black; /* Add a solid black border around the table */
+            width: 100%; /* Ensure table is responsive */
+        }
+        
+        th, td {
+            border: 1px solid black; /* Add borders to table cells */
+            padding: 5px; /* Add some padding for spacing */
+        }
+        
+        .video-name {
+            text-align: left;
+            margin-bottom: 5px; /* Add some space between name and video */
+        }
+
+        .login-box {
+            display: none; /* Initially hide the login box */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            background-color: #f9f9f9;
+            margin: 0 auto;
+        }
+
+        .login-box input[type="text"], .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .login-box img {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="images-removebg-preview.png" alt="Company Logo" class="logo">
+        <div class="company-info">
+            <h1 style="color: rgb(139, 16, 16);">GUN AND SHELL FACTORY</h1>
+            <h7>Cossipore, Kolkata</h7>
+            <p>"भारतीय सेना बुलंद में करे कोसीपोर टॉपगोला फैक्ट्री के सहारे"</p>
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Product</a>
+        <a href="#">Quality</a>
+        <a href="#">Admin</a>
+        <a href="#">Procurement</a>
+        <a href="#">Contact Us</a>
+        <a href="#">How to Buy Pistol</a>
+        <a href="#">RTI</a>
+    </nav>
+    <div class="slider">
+        <div><img src="images.jpeg" alt="Gun 1" style="width: 100%; height: 300px;"></div>
+        <div><img src="mkII.jpg" alt="Gun 2" style="width: 100%; height: 300px;"></div>
+        <div><img src="roh.jpeg" alt="Gun 3" style="width: 100%; height: 300px;"></div>
+        <div><img src="imagesRR.jpeg" alt="Gun 4" style="width: 100%; height: 300px;"></div>
+        <div><img src="AK_630.jpg" alt="Gun 5" style="width: 100%; height: 300px;"></div>
+        <div><img src="G.jpeg" alt="Gun 6" style="width: 100%; height: 300px;"></div>
+    </div>
+    <div class="info-section">
+        <div class="info-box left-box">
+            <h3 style="color:rgb(59, 22, 22)">HOW TO BUY GUNS / पिस्तौल खरीदने की प्रक्रिया </h3>
+            <h3 style="color:rgb(20, 11, 75)">Registration</h3> 
+            <p>• Register as a new user (PAN number is your login ID) /नए उपयोगकर्ता के रूप में पंजीकरण करें (पैन नंबर आपकी लॉगिन आईडी होगी)।</p>
+            <p>• Change your password / अपना पासवर्ड बदलें।</p>
+            <h3 style="color:rgb(20, 11, 75)">Order</h3> 
+            <p>• Deposit booking amount at least 2 days prior./कम से कम 2 दिन पहले बुकिंग राशि जमा करें।</p>
+            <p>• Login to your profile and click "Place Order". Fill in all details and make payment./अपनी प्रोफ़ाइल में लॉगिन करें और "ऑर्डर दें" पर क्लिक करें।
+              सभी विवरण भरें और भुगतान करें।</p>
+            <p>• Obtain registration number./पंजीकरण संख्या प्राप्त करें।</p>
+            <h3 style="color:rgb(20, 11, 75)">Documents</h3> 
+            <p>• Send a self-signed application form (with other documents)./वयं हस्ताक्षरित आवेदन पत्र भेजें (अन्य दस्तावेजों के साथ)।</p>
+            <p>• Print, fill, sign the application form and send it to "Marketing Cell, Gun & Shell Factory, Cossipore, Kolkata - 700002"./आवेदन पत्र प्रिंट करें, भरें, हस्ताक्षर करें और "मार्केटिंग सेल, गन एंड शेल फैक्ट्री, कोसिपुर, कोलकाता - 700002" पर भेजें।</p>
+            <h3 style="color:rgb(20, 11, 75)">Payment:</h3> 
+            <p>• Pay remaining balance after approval (through SBI Collect or NEFT).
+              Enter NEFT number and click "Pay Online"./अनुमोदन के बाद शेष राशि का भुगतान करें (SBI Collect या NEFT के माध्यम से)।
+              NEFT नंबर दर्ज करें और "ऑनलाइन भुगतान करें" पर क्लिक करें।</p>
+            <h3 style="color:rgb(20, 11, 75)">Collection:</h3> 
+            <p>• Receive call letter.
+              Report to the factory on reporting date (bring all documents)./कॉल लेटर प्राप्त करें।
+              रिपोर्टिंग तिथि पर कारखाने को रिपोर्ट करें (सभी दस्तावेज लाएं)।</p>
+            <p>• Check "Pay Online" menu for any remaining balance.
+              Follow step 4 process if there's any balance./ऑनलाइन भुगतान करें" मेनू से जांचें कि कोई शेष राशि है या नहीं।
+              यदि कोई शेष राशि है, तो चरण 4 में प्रक्रिया का पालन करें।</p>
+            <h3 style="color:rgb(20, 11, 75)">Note</h3> 
+            <p>• Full payment and all documents are required./पूर्ण भुगतान और सभी दस्तावेज आवश्यक हैं।</p>
+            <p>• Do not come to the factory before the reporting date./रिपोर्टिंग तिथि से पहले कारखाने में न आएं।</p>
+        </div>
+        <div class="info-box right-box">
+            <p style="color: red;">Indicative Price list for purchase of Yashasvi 0.32" Pistol for the financial year 2024-2025 is as follows - for individual customers*
+                [* The price is indicative and may change during invoicing ]</p>
+            <table>
+                <tr>
+                    <th>Pistol Type</th>
+                    <th>Current Price</th>
+                    <th>Image</th>
+                </tr>
+                <tr>
+                    <td>Yashasvi 0.32" Pistol</td>
+                    <td>₹1,56,544.00</td>
+                    <td><img src="G.jpeg" alt="Yashasvi 0.32 Inch Pistol" style="width: 100%; height: auto;"></td>
+                </tr>
+                <tr>
+                    <td>Yashasvi 0.32" Pistol (Cerakote)</td>
+                    <td>₹1,63,840.00</td>
+                    <td><img src="pistol.jpeg" alt="Yashasvi 0.32 Inch Pistol (Cerakote)" style="width: 100%; height: auto;"></td>
+                </tr>
+                <tr>
+                    <td>ASHANI MK - IM (View Specification)</td>
+                    <td>₹1,24,160.00</td>
+                    <td><img src="RFIFront.webp" alt="Ashani MK - IM Pistol" style="width: 100%; height: auto;"></td>
+                </tr>
+                <tr>
+                    <td>ASHANI MK - III (View Specification)</td>
+                    <td>₹1,46,432.00</td>
+                    <td><img src="mkIII.png" alt="Ashani MK - III Pistol" style="width: 100%; height: auto;"></td>
+                </tr>
+                <tr>
+                    <td>ASHANI MK - IIA WITH GUIDED RAIL (CERAKOTED) (View Specification)</td>
+                    <td>₹1,35,168.00</td>
+                    <td><img src="Screenshot_2024-07-22_15-33-42.png" alt="Ashani MK - IIA With Guided Rail (Cerakote)" style="width: 100%; height: auto;"></td>
+                </tr>
+            </table>
+            <br>
+            <div>
+                <video width="100%" height="auto" controls>
+                    <source src="Musgrave 9mm Pistol How It Works.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-name">MUSGRAVE 9MM PISTOL</p>
+                <video width="100%" height="auto" controls>
+                    <source src="32 Bore New Pistol YASHASVI GUN AND SHELL FACTORY.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-name">32 BORE NEW PISTOL YASHASVI GUN</p>
+            </div>
+        </div>
+    </div>
+    <div class="agreement">
+        <input type="checkbox" id="agree">
+        <label for="agree">I have understood the procedure </label>
+    </div>
+    <button class="login-btn" id="loginBtn">PROCEED</button>
+
+    <div class="login-box" id="loginBox">
+        <img src="images-removebg-preview.png" alt="Company Logo">
+        <h2>SIGN IN</h2>
+        <input type="text" placeholder="PAN Number (e.g., ABCDE123)" id="panNumber">
+        <input type="password" placeholder="Password" id="password">
+        <button id="loginSubmit">Login</button>
+        <p>New user? <a href="#" id="registerLink">Register here</a></p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+
+            $('#loginBtn').click(function(){
+                if ($('#agree').is(':checked')) {
+                    $('#loginBox').slideDown();
+                } else {
+                    alert('You must agree to the terms and conditions to proceed.');
+                }
+            });
+
+            $('#loginSubmit').click(function(){
+                window.location.href = 'market.html';
+            });
+
+            $('#registerLink').click(function(e){
+                e.preventDefault();
+                window.location.href = 'register.html';
+            });
+        });
+    </script>
+</body>
+</html>

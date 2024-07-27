@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy | Glock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Untitled.jpeg" alt="Glock Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Pistols</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="buy-options">
+            <h1>Choose Buying Option</h1>
+            <div class="buttons">
+                <button onclick="showRegistrationForm('customer')">Buy as Customer</button>
+                <button onclick="showRegistrationForm('dealer')">Buy as Dealer</button>
+            </div>
+        </section>
+        
+        <section class="registration-form" id="registrationForm" style="display: none;">
+            <h2>Registration Form</h2>
+            <div class="form-container">
+                <form id="regForm" action="terms.html">
+                    <div id="formContent"></div>
+                    <button type="submit">Submit</button>
+                </form>
+                <img src="turn.gif" alt="GIF" class="form-gif">
+            </div>
+        </section>
+    </main>
+    
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Glock. All rights reserved.</p>
+    </footer>
+    
+    <script>// Add this function to scripts.js
+
+        function showRegistrationForm(type) {
+            const formContent = document.getElementById('formContent');
+            formContent.innerHTML = '';
+        
+            if (type === 'customer') {
+                formContent.innerHTML = `
+                    <div>
+                        <label for="customerName">Name</label>
+                        <input type="text" id="customerName" name="customerName" required>
+                    </div>
+                    <div>
+                        <label for="customerEmail">Email</label>
+                        <input type="email" id="customerEmail" name="customerEmail" required>
+                    </div>
+                    <div>
+                        <label for="customerAddress">Address</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required>
+                    </div>
+                    <div>
+                        <label for="customerAddress">License Number:</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required>
+                    </div>
+                    <div>
+                        <label for="customerAddress">MOBILE Number:</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required>
+                    </div>
+                    <div>
+                        <label for="customerAddress">GST Number:</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required>
+                    </div>
+                    <div>
+                        <label for="customerAddress">PAN Number:</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required>
+                    </div>
+                    <div>
+                    <label for="customerAddress">License Issuing Authority:</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required>
+                    </div>
+                    <div>
+                    <label for="customerAddress">License Valid upto:</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required>
+                    </div>
+                    <div>
+                    <label for="customerAddress">Any Gov. Document:</label>
+                        <input type="text" id="customerAddress" name="customerAddress" required>
+                    </div>
+                `;
+            } else if (type === 'dealer') {
+                formContent.innerHTML = `
+                    <div>
+                        <label for="dealerName"> Firm Name:</label>
+                        <input type="text" id="dealerName" name="dealerName" required>
+                    </div>
+                    <div>
+                        <label for="dealerEmail">Email:</label>
+                        <input type="email" id="dealerEmail" name="dealerEmail" required>
+                    </div>
+                    <div>
+                        <label for="dealerLicense">Dealer License Number:</label>
+                        <input type="text" id="dealerLicense" name="dealerLicense" required>
+                    </div>
+                    <div>
+                        <label for="dealerAddress">Firm Address:</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">Mobile number:</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress"> GST number:</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">PAN in capital:</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">License UIN:</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">License Valid Upto</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">License Issuing Authority:</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">Address of License
+Issuing Authority :</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">Phone number (with STD) of License
+Issuing Authority :</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">Owner's Name :</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                    <div>
+                    <label for="dealerAddress">Owner's Mobile Number</label>
+                        <input type="text" id="dealerAddress" name="dealerAddress" required>
+                    </div>
+                `;
+            }
+        
+            document.getElementById('registrationForm').style.display = 'block';
+        }
+        </script>
+</body>
+</html>

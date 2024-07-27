@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | Glock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Untitled.jpeg" alt="Glock Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Quality</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">Procurement</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="terms">
+            <h1>Terms and Conditions</h1>
+            <div class="terms-box">
+                <p>
+                    Welcome to GSF website!</p>
+
+                    <p>•These terms and conditions outline the rules and regulations for the use of Gun and Shell Factory's Website, located at gsf.gov.in.
+                    
+                    By accessing this website we assume you accept these terms and conditions. Do not continue to use GSF website if you do not agree to take all of the terms and conditions stated on this page. 
+                </p>
+               
+                <p>•GSF uses cookies to track user data as per their Privacy Policy.
+                    Copyright of website content belongs to Gun and Shell Factory. Don't copy, redistribute, or sell content.</p>
+                    <P>•Users can post comments,
+                        but they must be appropriate and not infringe on others' rights.
+                        GSF can remove inappropriate comments.</P>
+                        <P>•Certain organizations can link to the GSF website with permission.
+                            You cannot create frames around the GSF website content.
+                            GSF is not responsible for content on other websites.
+                            See the Privacy Policy for information on user data.</P>
+                            <p>•You can request removal of offensive links from the GSF website.</p>
+            <div class="accept-terms">
+                <input type="checkbox" id="acceptTerms">
+                <label for="acceptTerms">I accept the Terms & Conditions</label>
+            </div>
+            <button onclick="confirmOrder()">Confirm your order by paying Rs.50,000</button>
+            <div id="emailInput" style="display: none;">
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" required>
+                <button onclick="sendConfirmation()">Submit</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; All rights reserved Gun and Shell Factory - Cossipore, Kolkata </p>
+    </footer>
+
+    <script>
+    function showRegistrationForm(type) {
+        const formContent = document.getElementById('formContent');
+        formContent.innerHTML = '';
+    
+        if (type === 'customer') {
+            formContent.innerHTML = `
+                <div>
+                    <label for="customerName">Name</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+                <div>
+                    <label for="customerEmail">Email</label>
+                    <input type="email" id="customerEmail" name="customerEmail" required>
+                </div>
+                <div>
+                    <label for="customerAddress">Address</label>
+                    <input type="text" id="customerAddress" name="customerAddress" required>
+                </div>
+            `;
+        } else if (type === 'dealer') {
+            formContent.innerHTML = `
+                <div>
+                    <label for="dealerName">Name</label>
+                    <input type="text" id="dealerName" name="dealerName" required>
+                </div>
+                <div>
+                    <label for="dealerEmail">Email</label>
+                    <input type="email" id="dealerEmail" name="dealerEmail" required>
+                </div>
+                <div>
+                    <label for="dealerLicense">Dealer License Number</label>
+                    <input type="text" id="dealerLicense" name="dealerLicense" required>
+                </div>
+                <div>
+                    <label for="dealerAddress">Address</label>
+                    <input type="text" id="dealerAddress" name="dealerAddress" required>
+                </div>
+            `;
+        }
+    
+        document.getElementById('registrationForm').style.display = 'block';
+    }
+    
+    function searchPistols() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const pistols = document.querySelectorAll('.pistol-card');
+        let found = false;
+    
+        pistols.forEach(pistol => {
+            const name = pistol.getAttribute('data-name').toLowerCase();
+            if (name.includes(input)) {
+                pistol.style.display = 'block';
+                found = true;
+            } else {
+                pistol.style.display = 'none';
+            }
+        });
+    
+        document.getElementById('noResults').style.display = found ? 'none' : 'block';
+    }
+    
+    function confirmOrder() {
+        const acceptTerms = document.getElementById('acceptTerms').checked;
+        if (!acceptTerms) {
+            alert('Please accept the terms and conditions.');
+            return;
+        }
+        document.getElementById('emailInput').style.display = 'block';
+    }
+    
+    function sendConfirmation() {
+        const email = document.getElementById('email').value;
+        if (!email) {
+            alert('Please enter your email address.');
+            return;
+        }
+    
+        // Here we simulate the email sending
+        alert('Order confirmation sent to ' + email);
+    
+        // Open Google Form link
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLSeWQ7M3oSRYUrXv2G5p_WO7t33Np9DrA_wMC_i_PVEMN5Du8g/viewform?usp=sharing', '_blank');
+    
+        // In a real scenario, you would make an AJAX call to a server-side script to send the email
+        // Example using fetch:
+        // fetch('send_email.php', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify({ email: email })
+        // }).then(response => response.json())
+        // .then(data => {
+        //     if (data.success) {
+        //         alert('Order confirmation sent to ' + email);
+        //     } else {
+        //         alert('Failed to send confirmation email.');
+        //     }
+        // });
+    }
+    </script>
+</body>
+</html>
